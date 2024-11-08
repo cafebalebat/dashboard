@@ -1,1 +1,1 @@
-apa aja ada
+apa apa ada

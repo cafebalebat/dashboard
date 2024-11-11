@@ -32,7 +32,7 @@ body {
 body.dark {
     --primary-color: #444343;
     --panel-color: #272727;
-    --text-color: #000;
+    --text-color: #ccc;
     --black-light-color: #707070;
     --border-color: #e6e5e5;
     --toggle-color: #ddd;
@@ -162,4 +162,9 @@ nav .menu-items {
     width: 15px;
     background-color: var(--panel-color);
     border-radius: 50%;
+    transition: var(--tran-03);
+}
+
+body.dark .switch:before {
+    left: 20px;
 }

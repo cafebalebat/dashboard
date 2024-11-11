@@ -50,6 +50,12 @@ nav {
     width: 250px;
     padding: 10px;
     background-color: var(--panel-color);
+    border-right: 2px solid var(--border-color);
+    transition: var(--tran-05);
+}
+
+nav.close {
+    width: 73px;
 }
 
 nav .logo-name {
@@ -69,12 +75,19 @@ nav .logo-image img {
     border-radius: 50px;
 }
 
-nav .logo-name.logo-name {
+nav .logo-name .logo-name {
     font-size: 22px;
     font-weight: 600;
     color: var(--text-color);
     margin-left: 14px;
+    transition: var(--tran-05);
 }
+
+nav.close .logo-name .logo-name {
+    opacity: 0;
+    pointer-events: none;
+}
+
 
 nav .menu-items {
     margin-top: 40px;
@@ -120,11 +133,23 @@ nav .menu-items {
     font-size: 18px;
     font-weight: 400;
     color: var(--black-light-color);
+    transition: var(--tran-05);
 }
+
+nav.close li a .link-name {
+    opacity: 0;
+    pointer-events: none;
+}
+
 
 .nav-links li a:hover i,
 .nav-links li a:hover .link-name {
     color: var(--primary-color);
+}
+
+.menu-items .logout-mod {
+    padding-top: 20px;
+    border-top: 2px solid var(--border-color);
 }
 
 .menu-items .mode {
@@ -167,4 +192,31 @@ nav .menu-items {
 
 body.dark .switch:before {
     left: 20px;
+}
+
+.dashboard {
+    position: relative;
+    left: 250px;
+    background-color: var(--panel-color);
+    height: 100vh;
+    width: calc(100% - 250px);
+    padding: 10px 14px;
+}
+
+.dashboard .top {
+    position: fixed;
+    left: 250px;
+    top: 0;
+    display: flex;
+    width: calc(100% - 250px);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 14px;
+    background-color: var(--panel-color);
+}
+
+.dashboard .top .sidebar-toggle {
+    font-size: 30px;
+    color: var(--text-color);
+    cursor: pointer;
 }

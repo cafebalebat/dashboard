@@ -155,6 +155,7 @@ nav.close li a .link-name {
 .menu-items .mode {
     display: flex;
     align-items: center;
+    white-space: nowrap;
 }
 
 .menu-items .mode-toggle {
@@ -201,6 +202,12 @@ body.dark .switch:before {
     height: 100vh;
     width: calc(100% - 250px);
     padding: 10px 14px;
+    transition: var(--tran-05);
+}
+
+nav.close ~ .dashboard {
+    left: 73px;
+    width: calc(100% - 73px);
 }
 
 .dashboard .top {
@@ -213,10 +220,47 @@ body.dark .switch:before {
     align-items: center;
     padding: 10px 14px;
     background-color: var(--panel-color);
+    transition: var(--tran-05);
+}
+
+nav.close ~ .dashboard .top {
+    left: 73px;
+    width: calc(100% - 73px);
 }
 
 .dashboard .top .sidebar-toggle {
     font-size: 30px;
     color: var(--text-color);
     cursor: pointer;
+}
+
+.dashboard .top .search-box {
+    position: relative;
+    height: 45px;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 30px;
+}
+
+.top .search-box input {
+    position: absolute;
+    border: 1px solid var(--border-color);
+    background-color: var(--panel-color);
+    padding: 0 25px 0 50px;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    color: var(--text-color);
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.top .search-box i {
+    position: absolute;
+    left: 15px;
+    font-size: 22px;
+    z-index: 10;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--black-light-color);
 }

@@ -58,6 +58,6 @@ const limits = [21383214, 766417, 57762472]; // Target limits for each box
 numbers.forEach((numberElement, index) => {
     const randomDelay = Math.random() * 5000; // Random delay up to 5000ms
     setTimeout(() => {
-        animateNumber(numberElement, limits[index], 10000000000); // 1 seconds to reach the target
+        animateNumber(numberElement, limits[index], 10000000000); // how many seconds to reach the target
     }, randomDelay);
 });

@@ -30,3 +30,34 @@ sidebarToggle.addEventListener("click", () =>{
         localStorage.setItem("status", "open")
     }
 })
+
+// Function to animate number
+function animateNumber(element, target, duration) {
+    let start = 0;
+    const stepTime = Math.abs(Math.floor(duration / target));
+    const interval = setInterval(() => {
+        if (start < target) {
+            start++;
+            element.textContent = start;
+        } else {
+            clearInterval(interval);
+            // Reset after reaching the target
+            setTimeout(() => {
+                start = 5000;
+                element.textContent = start;
+            }, 1000); // Wait for 1 second before resetting
+        }
+    }, stepTime);
+}
+
+// Get all number elements
+const numbers = document.querySelectorAll('.number');
+const limits = [21383214, 766417, 57762472]; // Target limits for each box
+
+// Start animations with random delay
+numbers.forEach((numberElement, index) => {
+    const randomDelay = Math.random() * 5000; // Random delay up to 5000ms
+    setTimeout(() => {
+        animateNumber(numberElement, limits[index], 10000000000); // 1 seconds to reach the target
+    }, randomDelay);
+});

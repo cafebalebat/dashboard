@@ -207,7 +207,7 @@ body.dark .switch:before {
     position: relative;
     left: 250px;
     background-color: var(--panel-color);
-    height: 100vh;
+    height: 120vh;
     width: calc(100% - 250px);
     padding: 10px 14px;
     transition: var(--tran-05);

@@ -80,6 +80,7 @@ if (!localStorage.getItem('isLoggedIn')) {
 
     // Cek setiap 10 detik
     setInterval(checkLoginTimeout, 10000);
+}
 
 //Logout
 document.getElementsByClassName('logout-mod').addEventListener('click', function() {

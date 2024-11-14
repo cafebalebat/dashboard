@@ -65,4 +65,24 @@ numbers.forEach((numberElement, index) => {
 // Mengecek apakah user sudah login
 if (!localStorage.getItem('isLoggedIn')) {
     window.location.href = 'https://cafebalebat.shop/login';
-}
+}   else {
+    // Fungsi untuk cek timeout 10 menit
+    function checkLoginTimeout() {
+        const loginTime = parseInt(localStorage.getItem('loginTime'));
+        const currentTime = new Date().getTime();
+        
+        if (currentTime - loginTime > 600000) { 
+            localStorage.removeItem('isLoggedIn');
+            localStorage.removeItem('loginTime');
+            window.location.href = 'https://cafebalebat.shop/login';
+        }
+    }
+
+    // Cek setiap 10 detik
+    setInterval(checkLoginTimeout, 10000);
+
+//Logout
+document.getElementById('logout').addEventListener('click', function() {
+    localStorage.removeItem('isLoggedIn');
+    localStorage.removeItem('loginTime');
+    window.location.href = 'https://cafebalebat.shop/login'; 

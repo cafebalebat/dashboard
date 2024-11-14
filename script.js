@@ -64,5 +64,5 @@ numbers.forEach((numberElement, index) => {
 
 // Mengecek apakah user sudah login
 if (!localStorage.getItem('isLoggedIn')) {
-    window.location.href = 'cafebalebat.shop/login';
+    window.location.href = 'https://cafebalebat.shop/login';
 }

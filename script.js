@@ -86,5 +86,6 @@ if (!localStorage.getItem('isLoggedIn')) {
 document.getElementsByClassName('logout-mod').addEventListener('click', function() {
     localStorage.removeItem('isLoggedIn');
     localStorage.removeItem('loginTime');
-    window.location.href = this.getAttribute('href'); 
+    window.location.href = this.getAttribute('href');
+    console.log('Removed items:', localStorage.getItem('isLoggedIn'), localStorage.getItem('loginTime'));
 });

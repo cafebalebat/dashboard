@@ -86,7 +86,7 @@ if (!localStorage.getItem('isLoggedIn')) {
 document.addEventListener('DOMContentLoaded', function() {
     const logoutLinks = document.querySelector('.logout-mod a');
 
-        logoutLinks[i].addEventListener('click', function(event) {
+        logoutLinks.addEventListener('click', function(event) {
             event.preventDefault(); // Mencegah perilaku default dari link
             console.log('Logout link clicked');
             localStorage.removeItem('isLoggedIn');

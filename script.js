@@ -82,7 +82,8 @@ if (!localStorage.getItem('isLoggedIn')) {
     setInterval(checkLoginTimeout, 10000);
 
 //Logout
-document.getElementById('logout').addEventListener('click', function() {
+document.getElementsByClassName('logout-mod').addEventListener('click', function() {
     localStorage.removeItem('isLoggedIn');
     localStorage.removeItem('loginTime');
     window.location.href = 'https://cafebalebat.shop/login'; 
+});

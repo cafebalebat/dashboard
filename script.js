@@ -83,9 +83,15 @@ if (!localStorage.getItem('isLoggedIn')) {
 }
 
 //Logout
-document.getElementsByClassName('logout-mod').addEventListener('click', function() {
-    localStorage.removeItem('isLoggedIn');
-    localStorage.removeItem('loginTime');
-    window.location.href = this.getAttribute('href');
-    console.log('Removed items:', localStorage.getItem('isLoggedIn'), localStorage.getItem('loginTime'));
-});
+const logoutButton = document.querySelector('.logout-mod');
+
+if (logoutButton) {
+    logoutButton.addEventListener('click', function() {
+        // Kode yang ingin Anda jalankan saat tombol logout diklik
+        console.log('Logout button clicked');
+        localStorage.removeItem('isLoggedIn');
+        localStorage.removeItem('loginTime');
+        // Redirect atau tindakan lain setelah logout
+        window.location.href = this.getAttribute('href');
+    });
+}

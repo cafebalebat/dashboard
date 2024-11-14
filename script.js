@@ -86,5 +86,5 @@ if (!localStorage.getItem('isLoggedIn')) {
 document.getElementsByClassName('logout-mod').addEventListener('click', function() {
     localStorage.removeItem('isLoggedIn');
     localStorage.removeItem('loginTime');
-    window.location.href = "https://cafebalebat.shop/login/"; 
+    window.location.href = this.getAttribute('href'); 
 });

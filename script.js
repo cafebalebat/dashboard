@@ -84,9 +84,8 @@ if (!localStorage.getItem('isLoggedIn')) {
 
 //Logout
 document.addEventListener('DOMContentLoaded', function() {
-    const logoutLinks = document.getElementsByClassName('logout-mod');
+    const logoutLinks = document.querySelector('.logout-mod a');
 
-    for (let i = 0; i < logoutLinks.length; i++) {
         logoutLinks[i].addEventListener('click', function(event) {
             event.preventDefault(); // Mencegah perilaku default dari link
             console.log('Logout link clicked');
@@ -95,5 +94,4 @@ document.addEventListener('DOMContentLoaded', function() {
             // Lakukan tindakan lain setelah logout, seperti mengarahkan ke halaman login
             window.location.href = 'https://cafebalebat.shop/login/'; // Contoh pengalihan
         });
-    }
 });

@@ -52,7 +52,7 @@ function animateNumber(element, target, duration) {
 
 // Get all number elements
 const numbers = document.querySelectorAll('.number');
-const limits = [21383214, 766417, 57762472]; // Target limits for each box
+const limits = [3777777, 4777777, 10777777]; // Target limits for each box
 
 // Start animations with random delay
 numbers.forEach((numberElement, index) => {

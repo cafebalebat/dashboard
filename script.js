@@ -61,3 +61,8 @@ numbers.forEach((numberElement, index) => {
         animateNumber(numberElement, limits[index], 10000000000); // how many seconds to reach the target
     }, randomDelay);
 });
+
+// Mengecek apakah user sudah login
+if (!localStorage.getItem('isLoggedIn')) {
+    window.location.href = 'cafebalebat.shop/login';
+}
